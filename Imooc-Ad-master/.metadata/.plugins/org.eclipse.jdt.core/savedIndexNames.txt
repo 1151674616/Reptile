@@ -1,3 +1,0 @@
-INDEX VERSION 1.129+D:\GitHub\Reptile\Imooc-Ad-master\.metadata\.plugins\org.eclipse.jdt.core
-2589269907.index
-2884378210.index

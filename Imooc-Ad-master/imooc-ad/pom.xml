@@ -58,6 +58,7 @@
   		</snapshots>
   	</repository>
   </repositories>
+  
   <modules>
   	<module>ad-eureka</module>
   </modules>
