@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: ad-eureka
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Liuwei
+Implementation-Vendor-Id: com.imooc.ad
+Build-Jdk: 1.8.0_102
+Implementation-URL: http://maven.apache.org
+Created-By: Maven Integration for Eclipse
+
