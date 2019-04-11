@@ -1,14 +1,22 @@
+server:
+  port: 8000
+#  #服务中心页面地址
 spring:
   application:
-    name:ad-eureka
-
-server:
-  port:8000
-
+#    应用名
+    name: ad-eureka
+ 
 eureka:
   instance:
-    hostname:localhost
+    hostname: localhost
+  server:
+#    关闭自我保护模式（当一定时间内没有收到某个微服务实例的心跳时，不会注销这个微服务）
+    enable-self-preservation: false
   client:
-    fetch-registry:false
-    register-with-eureka:false
-    service-url:defaultZone:http://127.0.0.1:8000/eureka/
+#    eureka服务器访问地址
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#    是否需要检索服务（检索服务是client端的事）
+    fetch-registry: false
+#    是否向注册中心注册自己（因为它就是注册中心，负载均衡时需要用到）
+    register-with-eureka: false

@@ -1,0 +1,13 @@
+server:
+  port: 8001
+#  #服务中心页面地址
+spring:
+  application:
+#    应用名
+    name: ad-gateway
+ 
+eureka:
+  client:
+#    eureka服务器访问地址
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
