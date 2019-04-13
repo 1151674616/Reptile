@@ -25,5 +25,6 @@
   
   <modules>
     <module>ad-common</module>
+    <module>sponsor</module>
   </modules>
 </project>
