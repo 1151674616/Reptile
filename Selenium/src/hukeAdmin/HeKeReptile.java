@@ -40,8 +40,8 @@ public class HeKeReptile {
 		// 获取 网页的 title
 		System.out.println("The testing page title is: " + driver.getTitle());
 
-		driver.findElement(By.id("txtUserName")).sendKeys("140321031");
-		driver.findElement(By.id("txtPassWord")).sendKeys("xyz357357");
+		driver.findElement(By.id("txtUserName")).sendKeys("****");//userName
+		driver.findElement(By.id("txtPassWord")).sendKeys("****");//passWord
 		// 获取验证码
 		WebElement ele = driver.findElement(By.id("getcode"));
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
