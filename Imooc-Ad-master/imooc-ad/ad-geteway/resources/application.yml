@@ -11,3 +11,14 @@ eureka:
 #    eureka服务器访问地址
     service-url:
       defaultZone: http://localhost:8000/eureka/
+
+zuul:
+#网关的前缀，非必需的，是网关的统一前缀
+  prefix: /imooc
+  routes:
+    sponsor:
+#匹配到path后 转发到应用名为 eureka-client-ad-sponsor 的微服务
+      path: /ad-sponsor/**
+      serviceId: eureka-client-ad-sponsor
+#是否跳过前缀
+      strip-prefix: 
