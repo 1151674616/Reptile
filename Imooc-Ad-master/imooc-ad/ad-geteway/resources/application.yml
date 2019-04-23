@@ -20,5 +20,5 @@ zuul:
 #匹配到path后 转发到应用名为 eureka-client-ad-sponsor 的微服务
       path: /ad-sponsor/**
       serviceId: eureka-client-ad-sponsor
-#是否跳过前缀
-      strip-prefix: 
+#是否跳过前缀 false 不跳过前缀  样例：127.0.0.1:8000/imooc/ad-sponsor/create/adPlan
+      strip-prefix: false
