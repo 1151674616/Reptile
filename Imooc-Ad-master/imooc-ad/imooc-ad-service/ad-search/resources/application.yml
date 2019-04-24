@@ -1,0 +1,42 @@
+server:
+	port: 7001
+	servlet:
+		context-path: /ad-search #所有conctroller 前缀
+spring:
+	application:
+		name: eureka-client-ad-search #这个应用的名称
+jpa:
+	show-sql: true #打印sql
+	hibernate:
+		ddl-auto: none #不使用ddl 操作数据库和实体类的关系
+	properties:
+		hibernate.format_sql: true #格式化sql
+		open-in-view: false #ture 会影响懒加载
+datasource:
+	url: jdbc:mysql://127.0.0.1:3306/imooc_ad_data?autoReconnect=true
+	username: root
+	password: 123456
+	tomcat:
+		max-active: 4 #最大线程
+		min-idle: 2 #最小空闲线程
+		initial-size: 2 #初始化线程
+#注册中心地址
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:defaultZone: http://127.0.0.1:8000/eureka/
+    
+# Feign 可以实现声明式的Web 服务客户端  通过
+#@FeignClient 指定调用的服务名称
+#在接口上声明@RequestMapping 指明调用服务的地址与请求类型
+#通过在@FeignClient 中配置fallback 指定熔断
+#实现接口：SponsorClient.java，熔断：SponsorClientHystrix.java
+feign: 
+	hystrix:
+		enabled: true #开启feign
+management:
+	endpoints:
+		web:
+			exposure:
+				include: "*"#暴露所有的URL信息
