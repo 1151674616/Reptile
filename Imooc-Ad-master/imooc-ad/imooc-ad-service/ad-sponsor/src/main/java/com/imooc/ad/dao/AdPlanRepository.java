@@ -2,12 +2,14 @@ package com.imooc.ad.dao;
 
 import com.imooc.ad.entity.AdPlan;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * Created by Qinyi.
  */
+@Repository
 public interface AdPlanRepository extends JpaRepository<AdPlan, Long> {
 
     AdPlan findByIdAndUserId(Long id, Long userId);

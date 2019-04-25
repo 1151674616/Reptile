@@ -59,8 +59,8 @@
   </repositories>
   
   <modules>
-  	<module>ad-eureka</module>
-    <module>ad-geteway</module>
-    <module>imooc-ad-service</module>
+	<module>ad-eureka</module>
+	<module>ad-geteway</module>
+	<module>imooc-ad-service</module>
   </modules>
 </project>

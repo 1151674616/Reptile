@@ -1,7 +1,7 @@
 server:
   port: 7000
   servlet:
-    context-path: /ad-sponsor   #所有conctroller 前缀
+    context-path: /ad-sponsor #所有conctroller 前缀
 
 spring:
   application:
@@ -13,17 +13,18 @@ spring:
     properties:
       hibernate.format_sql: true #格式化sql
     open-in-view: false #ture 会影响懒加载
-datasource: #数据源源
+  datasource:#数据源源
     url: jdbc:mysql://127.0.0.1:3306/imooc_ad_data?autoReconnect=true
     username: root
     password: 123456
     tomcat:
-      max-active: 4 #最大线程
-      min-idle: 2 #最小空闲线程
-      initial-size: 2 #初始化线程
+      max-active: 4#最大线程
+      min-idle: 2#最小空闲线程
+      initial-size: 2#初始化线程
 #注册中心地址
 eureka:
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-    service-url:defaultZone: http://127.0.0.1:8000/eureka/
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+
+
